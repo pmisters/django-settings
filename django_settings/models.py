@@ -106,4 +106,20 @@ class PositiveInteger(Model):
     class Meta:
         abstract = True
 registry.register(PositiveInteger)
+
+
+class Money(Model):
+    value = models.DecimalField(max_digits=10, decimal_places=2)
+
+    class Meta:
+        abstract = True
+registry.register(Money)
+
+
+class DateTime(Model):
+    value = models.DateTimeField()
+
+    class Meta:
+        abstract = True
+registry.register(DateTime)
 # end ###################
